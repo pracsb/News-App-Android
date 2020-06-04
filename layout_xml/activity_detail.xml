@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        android:fitsSystemWindows="true">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Detail_toolbar"
+        android:background="@android:color/white"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+        app:title="article_title">
+
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:background="@drawable/ic_bookmark_border_black_24dp"
+            android:id="@+id/bookmarkBtn"
+            android:layout_marginLeft="20dp"
+            android:tag="0"/>
+
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:background="@drawable/bluetwitter"
+            android:layout_marginLeft="6sp"
+            android:id="@+id/Twitter_share"
+            android:layout_marginRight="5dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nestedScrollView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="5sp"
+            tools:context=".DetailActivity">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:src="@drawable/ic_launcher_background"
+                        android:id="@+id/image_detail"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title_detail"
+                        android:textSize="25dp"
+                        android:text="This is the title"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Technology"
+                            android:id="@+id/section_detail"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginLeft="5sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="06 Apr 2020"
+                            android:id="@+id/date_detail"
+                            android:layout_marginStart="220dp"
+                            android:layout_marginLeft="220dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is the Body of the details page"
+                        android:id="@+id/body_detail"
+                        android:textSize="17dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="6sp"
+                        android:layout_marginLeft="6sp"
+                        android:layout_marginRight="20dp"
+                        android:ellipsize="end"
+                        android:maxLines="30"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/full_article_click"
+                        android:textAlignment="center"
+                        android:text="View full article"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+                        android:layout_marginTop="5sp"
+                        android:gravity="center_horizontal"
+                        android:contextClickable="true"
+                        />
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

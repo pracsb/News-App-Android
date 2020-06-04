@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bookmark_linearLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/no_bookmark_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="No Bookmarked Articles"
+        android:layout_marginLeft="100dp"
+        android:layout_gravity="center"/>
+    <GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:columnCount="2"
+        android:id="@+id/myGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bkRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+    </GridLayout>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Trending Fragment"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_centerInParent="true" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Search Term:"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/trending_searchQuery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/coronavirus"
+        android:layout_marginHorizontal="18sp"
+        android:shadowColor="@color/colorPrimary"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:inputType="text"
+        android:imeOptions="actionSend"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sampleText"
+        android:text=""
+        android:layout_gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/trending_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_margin="5sp"/>
+
+
+
+
+</LinearLayout>
